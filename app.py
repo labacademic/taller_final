@@ -8,6 +8,7 @@ st.set_page_config(page_title="Riesgo de Crédito", page_icon="💳")
 st.title("💳 Evaluación de credito")
 
 st.caption("El modelo calcula la probabilidad. Si el riesgo NO es Alto, mostramos el cronograma.")
+st.markdown("[Visita nuestra página web](https://www.labdatosperu.org/capacitaciones/machine-learning-con-python)")
 
 # Entradas
 salario = st.number_input("💼 Salario mensual (S/.)", min_value=0.0, value=2500.0, step=500.0)
@@ -34,3 +35,4 @@ if st.button("Calcular"):
         st.caption(f"Cuota estimada: S/. {cuota:,.2f}")
         df = cronograma_frances(monto=monto, n_cuotas=plazo, tasa=TASA_MENSUAL)
         st.dataframe(df, use_container_width=True)
+
